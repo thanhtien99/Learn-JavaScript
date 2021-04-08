@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div calss ="dropdown" id="menu">
+        <div class="dropdown">
+            <ul>
+                <li><a href="#">Trang chu</a>
+                    <ul class="submenu">
+                        <li><a href="#">List1</a></li>
+                        <li><a href="#">List2</a></li>
+                        <li><a href="#">List3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Cai Dat</a>
+                    <ul class="submenu">
+                        <li><a href="#">Setting1</a></li>
+                        <li><a href="#">Setting2</a></li>
+                        <li><a href="#">Setting3</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Thong bao</a>
+                    <ul class="submenu">
+                        <li><a href="#">co thong bao 1</a></li>
+                        <li><a href="#">co thong bao 2</a></li>
+                        <li><a href="#">co thong bao 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Hoat Dong</a>
+                    <ul class="submenu">
+                        <li><a href="#">like1</a></li>
+                        <li><a href="#">like2</a></li>
+                        <li><a href="#">like3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("li").click(function(){
+            let check = $(this).find(".submenu").hasClass("active");
+            if(check){
+                $(this).find(".submenu").removeClass("active");
+            }else{
+                $('.submenu').removeClass('active');
+                $(this).find(".submenu").addClass("active");
+            }
+
+
+        })
+    })
+</script>
+</html>

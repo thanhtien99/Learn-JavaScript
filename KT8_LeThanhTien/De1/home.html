@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="baitap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+   <div class="container">
+       <h2>Thêm sản phẩm</h2>
+
+    <form id="frm">
+        <p>
+            <label>
+                <b>Danh mục sản phẩm.</b><br>
+                <select class= "col-md-12">
+                    <option>Điện thoại di động</option>
+                    <option>Máy tính bảng</option>
+                    <option>Laptop</option>
+                    <option>Phụ kiện</option>
+                    <option>Đồng hồ</option>
+                    </select>
+            </label>
+        </p>
+        <p>
+            <b>Thông tin.</b> <br>
+            <select>
+                <option>Sản phẩm nổi bật</option>
+                <option>Sản phẩm mới ra mắt</option>
+                <option>Sản phẩm giảm giá</option>
+                </select> <br>
+            <label class= "col-md-12" >
+                Tên sản phẩm
+                <input class="form-control" type="text" name="namesp" id="namesp" required>
+            </label> <br>
+            <label class= "col-md-12">
+                Giá sản phẩm
+                <input class="form-control" type="text" name="pri" id="pri" required>
+            </label> <br>
+            <label class= "col-md-12">
+                Giá cũ sản phẩm
+                <input class="form-control" type="text" name="priold" id="priold" required>
+            </label>
+        </p>
+        Thêm ảnh sản phẩm*Bắt buộc <br>
+        <label>
+            <input class="form-control" type="file" name="img" id="img">
+        </label> <br>
+        <button type="button" onclick="add()" class="btn btn-danger">Đồng ý thêm</button>
+    </form>
+    <h2>ĐỒNG HỒ NỔI BẬT NHẤT</h2>
+    <h4 id="demo"></h4>
+    <hr class="new">
+    <div class="row" style="padding-left: 20px;">
+    </div>
+</div>
+    </div>
+</html>

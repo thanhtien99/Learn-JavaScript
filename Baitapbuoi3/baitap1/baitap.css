@@ -1,0 +1,21 @@
+#frm{
+    text-align: center;
+    width: 600px;
+    border-spacing: 0;
+    border : 1px solid #bbb;
+}
+#tb{
+    width: 600px;
+    border-spacing: 0;
+    border : 1px solid #bbb;
+}
+#tb tr {
+    height: 27px;
+}
+#tb tr th, #tb tr td{
+    text-align: center;
+    border : 1px solid #ccc;
+}
+#tb tr:last-child td{
+    border: none;
+}

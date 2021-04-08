@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body onload="listProducts()">
+    <div class="dash">
+        <h1>Thêm sản phẩm</h1>
+        <hr>
+        <div class="icon">
+            <div class="fa fa-tachometer"><a href="#">Dashboard</a></div> / <div class="fa fa-desktop">Thêm sản phẩm</div> 
+        </div>
+    </div>
+    <div class="box mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-11">
+                <form name="form">
+                    <div class="form-group">
+                        <label class="col-md-2">Danh mục sản phẩm</label>
+                        <select class="form-control" type="text" id="danhmuc">
+                            <option value="dienthoaididong">Điện thoại di động</option>
+                            <option value="maytinhbang">Máy tính bảng</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="phukien">Phụ kiện</option>
+                            <option value="dongho">Đồng hồ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2">Thông tin</label>
+                        <select class="form-control" type="text" id="sanpham">
+                            <option value="spnoibat">Sản phẩm nổi bật</option>
+                            <option value="spmoiramat">Sản phẩm mới ra mắt</option>
+                            <option value="spgiamgia">Sản phẩm giảm giá</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="ten" placeholder="Tên sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="gia" placeholder="Giá sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="giacu" placeholder="Giá cũ">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">Thêm ảnh sản phẩm <span style="color:red;">* Bắt Buộc</span></label>
+                        <input class="form-control-file" type="file" id="anh" onchange="uploadImg(event)" required>
+                    </div>
+                    <button type="button" id="btn_dongy" class="btn btn-danger" onclick="dongy()">
+                        <i class="fa fa-sign-in"></i>
+                        Đồng ý thêm
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <h3>Đồng hồ nổi bật nhất</h3>
+        <hr>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+                <div class="result">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

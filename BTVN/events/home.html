@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="text.css">
+    <script src="text.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body> 
+    <div class="container">
+    <form id="frm">
+        <p>
+            <label>
+                Image 
+                <input class="form-control" type="file" name="img" id="img">
+            </label>
+            <label>
+                Product Name
+                <input class="form-control" type="text" name="pname" id="pname">
+            </label>
+            </p>
+            <p>
+            <label>
+                Product Quantity
+                <input class="form-control" type="number" name="qty" id="qty">
+            </label>
+            <label>
+                Product Price
+                <input class="form-control" type="number" name="pri" id="pri">
+            </label>
+            <button type="button" onclick="add()" class="btn btn-primary">Add</button>
+        </p>
+    </form>
+    <h4>GIỎ HÀNG</h4>
+        <hr class="new">
+        <div class="body-top">
+        <p id="text"></p>
+        <button type="button" onclick="tiep()" class="btn btn-primary" id="btn1">Tiếp tục xem giỏ hàng</button>
+        </div>
+    <table id="tb">
+        <thead id="thead">
+        <tr>
+            <th>No</th>
+            <th></th>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Tổng</th><br>
+        
+        </tr>
+        </thead>
+    </table> <br>
+    <button type="button" onclick="tiep()" class="btn btn-primary" id="btn2">Cập nhật giỏ hàng</button> 
+    <br> <br>
+    <div class="table2">
+        <b>Cộng giỏ hàng</b>
+        <br><br>
+    <table id="tbl"> 
+        <tbody id="tbody">
+            <tr>
+                <td>Tạm tính</td>
+                <td id="total">0</td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="tbl"> 
+        <tbody id="tbody2">
+            <tr>
+                <td>Total</td>
+                <td id="total">0</td>
+            </tr>
+        </tbody>
+    </table> <br>
+    <button type="button" onclick="tiep()" class="btn btn-primary" id="btn3">Tiến hành thanh toán</button> 
+</div>
+    </div>
+    
+</body>
+</html>

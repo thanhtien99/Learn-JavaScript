@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="text.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form name="frm" class="frm">
+            <div>
+                <p>
+                <label>
+                    Product Name:
+                    <input class="form-control" type="text" name="product" id="product" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Product Picture:
+                    <input class="form-control" type="file" name="img" id="img" required>
+                </label>
+            </p>
+                <label>
+                    Product Price:
+                    <input class="form-control" type="number" name="price" id="price"  required>
+                </label>
+            </div>
+            <div>
+                <button type="button" onclick="Add()" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+        <h4>ĐIỆN THOẠI NỔI BẬT NHẤT</h4>
+        <hr class="new">
+        <div class="row" style="padding-left: 20px;">
+        </div>
+    </div>
+</body>
+</html>

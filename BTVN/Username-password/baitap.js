@@ -1,0 +1,28 @@
+var username = ["admin","author","guest"];
+var password = ["321","abc","xyz"];
+function login(){
+    var username = document.getElementById('txt1').value;
+    var password = document.getElementById('txt2').value;
+    var sms = "";
+    for(var i =0; i< username.length ; i++){
+        if(username==username[i]){
+            sms = "";
+            if(password==password[i]){
+                location.href="https://www.google.com";
+            }
+            else{
+                sms ="Invalid password!";
+            }
+            break;
+        }
+        else {
+            sms = "Invalid username!";
+        }
+    }
+    alert(sms);
+}
+function cancel(){
+    document.getElementById('txt1').value="";
+    document.getElementById('txt2').value="";
+    document.getElementById('txt1').focus();
+}

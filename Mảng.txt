@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body onload="listProducts()">
+    <div class="container-fluid" style="margin:20px 0;">
+        <div class="row" id="man">
+            <div class="col-12">
+                <h1>THỜI TRANG NAM</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid" style="margin:20px 0;">
+        <div class="row" id="woman">
+            <div class="col-12">
+                <h1>THỜI TRANG NỮ</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="arrobj.js"></script>
+</body>
+</html>
+
+var man = [
+    {
+        id:1,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"https://image.yes24.vn/Upload/ProductImage/thecosmo/1795829_L.png"
+    },
+    {
+        id:2,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"src='./9_2.jpg'"
+    },
+    {
+        id:3,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"https://znews-photo.zadn.vn/w1024/Uploaded/ycgmvjvj/2018_04_16/9_2.jpg"
+    },
+    {
+        id:4,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"https://znews-photo.zadn.vn/w1024/Uploaded/ycgmvjvj/2018_04_16/9_2.jpg"
+    },
+]
+
+var woman = [
+    {
+        id:1,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"https://znews-photo.zadn.vn/w1024/Uploaded/ycgmvjvj/2018_04_16/9_2.jpg"
+    },
+    {
+        id:2,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"https://znews-photo.zadn.vn/w1024/Uploaded/ycgmvjvj/2018_04_16/9_2.jpg"
+    },
+    {
+        id:3,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"https://znews-photo.zadn.vn/w1024/Uploaded/ycgmvjvj/2018_04_16/9_2.jpg"
+    },
+    {
+        id:4,
+        name:"The Cosmo (Đen) Quần short kaki",
+        code:"TC1025011BA",
+        price:"250.000",
+        image:"https://znews-photo.zadn.vn/w1024/Uploaded/ycgmvjvj/2018_04_16/9_2.jpg"
+    },
+]
+
+function listProducts() {
+    for (let i = 0; i < man.length; i++) {
+        var demo = `
+        <div class="col-3">
+            <div class="card" width="18rem">
+                <div class="card-img-top" style="background-image: url(${man[i].image}); height: 400px; background-size: cover;"></div>
+                <div class="card-body">
+                    <h5 class="card-title">${man[i].name}</h5>
+                    <p class="card-text">${man[i].price}</p>
+                    <a href="#" class="btn btn-primary" onclick="orderMan(${man[i].id})">Đặt mua</a>
+                </div>
+            </div>
+        </div>
+        `;
+    document.getElementById("man").innerHTML += demo;
+    }
+
+    for (let i = 0; i < woman.length; i++) {
+        var demo = `
+        <div class="col-3">
+            <div class="card" width="18rem">
+                <div class="card-img-top" style="background-image: url(${woman[i].image}); height: 400px; background-size: cover;"></div>
+                <div class="card-body">
+                    <h5 class="card-title">${woman[i].name}</h5>
+                    <p class="card-text">${woman[i].price}</p>
+                    <a href="#" class="btn btn-primary" onclick="orderWoman(${woman[i].id})">Đặt mua</a>
+                </div>
+            </div>
+        </div>
+        `;
+    document.getElementById("woman").innerHTML += demo;
+    }
+}
+
+function orderMan(id) {
+    alert("Bạn đã đặt hàng thành công " + man[id - 1].name)
+}
+
+function orderWoman(id) {
+    alert("Bạn đã đặt hàng thành công " + man[id - 1].name)
+}

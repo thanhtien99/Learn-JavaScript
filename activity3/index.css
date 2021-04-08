@@ -1,0 +1,10 @@
+h3{
+    color: blue;
+}
+.wap{
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    text-align: center;
+    margin : auto;
+}

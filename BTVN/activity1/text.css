@@ -1,0 +1,35 @@
+
+.section{
+    margin-left: 25%;
+}
+#frm{
+    margin-left: 15%;
+    width: 600px;
+    border-spacing: 0;
+    ;
+}
+#tb{
+    width: 600px;
+    border-spacing: 0;
+    border : 1px solid #bbb;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+}
+#tb tr {
+    height: 27px;
+}
+#tb tr th, #tb tr td{
+    border : 1px solid #ccc;
+}
+#tb tr:last-child td{
+    border: none;
+}
+
+
+
+
+
+
+
